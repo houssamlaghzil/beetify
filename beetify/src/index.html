@@ -1,13 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <title>Beetify</title>
   <base href="/">
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <style>
+    html {
+      background: linear-gradient(#fff000, #000000) no-repeat ;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://image.freepik.com/free-vector/bee-logo-yellow_20065-150.jpg">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <script>
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        const token = 'BQD8HsCi680LTscurHyYYaB61WcRF_CvonfDAvTuIGQdXTl8OE0wasegTOv11m-J-gxFSx8yL9kJAWkfG85kfS4Ftgf-Ms-YfXTrCK0Wnn7EdsNhAKQYKaUU0vRSj6BXAleLDk_vR-D0erHy632SkmXgqBrTqKfRwiREWTYLpfojSC55JBo';
+        const player = new Spotify.Player({
+          name: 'Web Playback SDK Quick Start Player',
+          getOAuthToken: cb => { cb(token); }
+        });
+
+        // Error handling
+        player.addListener('initialization_error', ({ message }) => { console.error(message); });
+        player.addListener('authentication_error', ({ message }) => { console.error(message); });
+        player.addListener('account_error', ({ message }) => { console.error(message); });
+        player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+        // Playback status updates
+        player.addListener('player_state_changed', state => { console.log(state); });
+
+        // Ready
+        player.addListener('ready', ({ device_id }) => {
+          console.log('Ready with Device ID', device_id);
+        });
+
+        // Not Ready
+        player.addListener('not_ready', ({ device_id }) => {
+          console.log('Device ID has gone offline', device_id);
+        });
+
+        // Connect to the player!
+        player.connect();
+      };
+    </script>
+  </app-root>
 </body>
 </html>
