@@ -19,7 +19,7 @@
   <app-root>
     <script>
       window.onSpotifyWebPlaybackSDKReady = () => {
-        const token = 'BQD8HsCi680LTscurHyYYaB61WcRF_CvonfDAvTuIGQdXTl8OE0wasegTOv11m-J-gxFSx8yL9kJAWkfG85kfS4Ftgf-Ms-YfXTrCK0Wnn7EdsNhAKQYKaUU0vRSj6BXAleLDk_vR-D0erHy632SkmXgqBrTqKfRwiREWTYLpfojSC55JBo';
+        const token = 'BQBoN10vzp_6V4riN9J6puo5mOf3eGARGyH-K-r6iGZCAx1e9DcACZTy38ospMtXce2fcUkq7R0bSOKsAidvGEj5x7FBWuf3GC88Tie7JjuSfiagGG49XT12z1Xgx_eJs4t5_rxBctsqqOCi5S-0ubHCrpNGMQYHYGpCw_g9QRzelml1Cus';
         const player = new Spotify.Player({
           name: 'Web Playback SDK Quick Start Player',
           getOAuthToken: cb => { cb(token); }
@@ -46,6 +46,15 @@
 
         // Connect to the player!
         player.connect();
+
+        /*app.get('/login', function(req, res) {
+          var scopes = 'user-read-private user-read-email';
+          res.redirect('https://accounts.spotify.com/authorize' +
+            '?response_type=code' +
+            '&client_id=' + my_client_id +
+            (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
+            '&redirect_uri=' + encodeURIComponent(redirect_uri));
+        });*/
       };
     </script>
   </app-root>
