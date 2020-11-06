@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8b3473b2-33ec-4cf1-9f0f-b19c2a25f6f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beetify/C:\Users\ElHoussamo\AppData\Roaming\npm-cache/_cacache/index-v5/34/8e/30c54cce758990bcd1b33114c4aa8a9e5a25c152ac39d9feab22b7e13e00" beforeDir="false" afterPath="$PROJECT_DIR$/beetify/C:\Users\ElHoussamo\AppData\Roaming\npm-cache/_cacache/index-v5/34/8e/30c54cce758990bcd1b33114c4aa8a9e5a25c152ac39d9feab22b7e13e00" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beetify/C:\Users\ElHoussamo\AppData\Roaming\npm-cache/anonymous-cli-metrics.json" beforeDir="false" afterPath="$PROJECT_DIR$/beetify/C:\Users\ElHoussamo\AppData\Roaming\npm-cache/anonymous-cli-metrics.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/beetify/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beetify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/beetify/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beetify/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/beetify/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,5 +55,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="712" y="419" width="350" height="300" key="org.angular.cli.generate" timestamp="1604650942586">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="712" y="419" width="350" height="300" key="org.angular.cli.generate/0.0.1680.1050@0.0.1680.1050" timestamp="1604650942586" />
   </component>
 </project>
