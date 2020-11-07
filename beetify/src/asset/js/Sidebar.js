@@ -6,10 +6,13 @@ import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { getTokenFromResponse } from "./spotify";
 import { useStateValue } from "./StateProvider";
+import SidebarPlaylist from "./SidebarPlaylist";
+import {Home} from "@material-ui/icons";
 
 function Sidebar() {
   const [{ playlists }, dispatch] = useStateValue();
   console.log(playlists);
+
 
   return (
     <div className="sidebar">
@@ -24,11 +27,7 @@ function Sidebar() {
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
-      {playlists?.items?.map((playlist) => (
-        <SidebarOption option={playlist.name} />
-      ))}{playlists?.items?.map((playlist) => (
-        <SidebarOption option={playlist.name} />
-      ))}
+      <SidebarPlaylist/>
     </div>
   );
 }
